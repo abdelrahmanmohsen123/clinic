@@ -40,7 +40,7 @@
                         <td>{{ $assessment->lab_test }}</td>
                         <td>
                           @if ($assessment->other_procedure == null)
-                              {{"not found"}}
+                              {{"no procedures"}}
                           @else
                           {{ $assessment->other_procedure }}
                           @endif

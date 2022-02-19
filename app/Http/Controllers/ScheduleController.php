@@ -41,10 +41,11 @@ class ScheduleController extends Controller
    
     public function store(Request $request)
     {
-
-        // $this->validate($request, [
-        //     'date' => ['required|date|after:tomorrow']]);
- 
+        $todayDate = date('m/d/Y');
+        $request->validate( [
+            'date' => 'required|date|after:t'.$todayDate
+        ]);
+    
 
         $schedule = new schedule(); 
         $schedule->date = request('date');
@@ -88,8 +89,8 @@ class ScheduleController extends Controller
      */
     public function update(Request $request, schedule $schedule)
     {
-        // $this->validate($request, [
-        //     'date' => ['required|date|after:today']]);
+
+
 
         $schedule = schedule::find($schedule->id);       
         // $schedule->date = request('date');

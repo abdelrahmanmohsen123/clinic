@@ -57,9 +57,9 @@
                             </button>
                         </form>
 
-                            <a  href="{{route('bill.edit',$bill->id)}}" class="edit_ancor btn btn-warning">
+                            {{-- <a  href="{{route('bill.edit',$bill->id)}}" class="edit_ancor btn btn-warning">
                                 <i class="fa fa-edit"></i>
-                            </a>
+                            </a> --}}
 
                        </td>
 
