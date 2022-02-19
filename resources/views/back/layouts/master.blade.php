@@ -1,0 +1,6 @@
+@include('back.includes.header')
+@include('back.includes.navbar')
+@include('back.includes.sidebar')
+@yield('content')
+@include('back.includes.footer')
+@include('back.includes.script')
